@@ -12,9 +12,19 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css" />
   <link rel="stylesheet" href="css/style.css">
   <title>Live streaming</title>
+  <script>
+    function disableClick(){
+        document.onclick=function(event){
+        if (event.button == 2) {
+            alert('Right Click Message');
+            return false;
+        }
+        }
+    }
+  </script>
 </head>
 
-<body>
+<body onLoad="disableClick()">
 
   <header>
     <div class="overlay"></div>
